@@ -1,3 +1,4 @@
-import LogHeader from './logHeader';
+import HeroParallax from './heroParallax';
+import ScrollAnchors from './scrollAnchors';
 
-export { LogHeader };
+export { HeroParallax, ScrollAnchors };
