@@ -1,0 +1,59 @@
+.timeline
+  margin: 60px auto
+  display: flex
+  flex-direction: column
+  align-items: center
+  position: relative
+
+  .timeline-triangles
+    position: absolute
+    opacity: .5
+    &.triangles-left
+      left: -5%
+      bottom: 5%
+      transform: scaleX(-1)
+    &.triangles-right
+      right: -5%
+      top: 10%
+
+  .timeline-item
+    min-width: 250px
+    border-radius: 10px
+    box-shadow: $shadow-1
+    padding: 30px 20px
+    font-size: 18px
+    &:nth-child(odd)
+      transform: translateX(-50%)
+      h4
+        text-align: right
+      h5
+        text-align: right
+    &:nth-child(even)
+      transform: translateX(50%)
+      .time
+        right: unset
+        left: 0
+        transform: translate(-50%, -50%)
+    
+    .time
+      position: absolute
+      top: 0
+      right: 0
+      background: $primary
+      width: 50px
+      height: 50px
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 200px
+      color: $white
+      font-weight: 900
+      transform: translate(50%, -50%)
+      box-shadow: $shadow-3
+      font-size: 14px
+
+    h4
+      font-weight: 900
+
+    h5
+      font-weight: 100

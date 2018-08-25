@@ -1,0 +1,35 @@
+.price-container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  max-width: 750px
+  margin: 20px auto
+  .price
+    font-weight: 100
+    line-height: 1
+    span
+      font-weight: 900
+    &.first-price
+      p
+        font-size: 36px
+      span
+        color: $primary
+        position: relative
+        z-index: 1
+        &::before
+          content: url('/images/SmallTriangles.svg')
+          width: 120px
+          height: 120px
+          object-fit: contain
+          display: block
+          position: absolute
+          right: 0
+          top: 0
+          z-index: -1
+          transform: translateY(-30%)
+    &.second-price
+      p
+        font-size: 28px
+    &.third-price
+      p
+        font-size: 22px

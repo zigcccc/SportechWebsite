@@ -21,6 +21,33 @@ section.section-wrapper
       position: relative
       z-index: 1
 
+  span.has-rounded-background
+    background: $primary
+    color: $white
+    font-weight: 900
+    border-radius: 200px
+    display: block
+    text-align: center
+    padding: .75em 1em
+
+  .cta-container
+    display: flex
+    justify-content: center
+    font-size: 22px
+    margin-top: 40px
+    & > a
+      background: $primary
+      border: 4px solid $white
+      border-radius: 200px
+      padding: .75em 1em
+      color: $white
+      font-weight: 900
+      +bounceTransition(500ms)
+      &:hover
+        transform: translateY(-5px)
+        box-shadow: $shadow-3
+        background: darken($primary, 5%)
+
   .section-main-content
     margin-top: 50px
     &.has-pulled-image-left
@@ -31,6 +58,7 @@ section.section-wrapper
         border-bottom-right-radius: 10px
         box-shadow: $shadow-5
         overflow: hidden
+        min-height: 500px
         & > img
           object-fit: cover
           width: 100%
@@ -43,7 +71,7 @@ section.section-wrapper
       max-width: 710px
       &.is-centered
         margin: 0 auto
-        text-align: justify
+        text-align: justify    
 
     .centered-content
       text-align: center
@@ -58,3 +86,23 @@ section.section-wrapper
         z-index: 1
       p
         text-align: center !important
+
+
+#dividing-section
+  min-height: 450px
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-bottom: 50px
+  background:
+    image: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 100%), url('/images/dividing_section_bg.jpg')
+    size: cover
+    attachment: fixed
+    position: center center
+
+  h3.quote
+    font-size: 48px
+    color: $white
+    font-weight: 900
+    max-width: 700px
+    text-align: center

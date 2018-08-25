@@ -1,0 +1,91 @@
+.footer-divider
+  margin-bottom: -10px
+  
+footer
+  background: $black
+  margin-bottom: 0
+  min-height: 300px
+
+  .footer-header-row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: -15px
+
+    .social-icons
+      display: flex
+      > a
+        margin: 0 1em
+        &:last-of-type
+          margin-right: 0
+
+    .go-to-top,
+    .social-btn
+      background: $white
+      color: $black
+      width: 40px
+      height: 40px
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 50%
+      +easeTransition(400ms)
+      & > a
+        color: $black
+      &:hover
+        transform: translateY(-3px)
+
+    .navbar
+      .navbar-brand
+        padding: 0
+        .navbar-item
+          padding: 0
+
+  .footer-contact-info
+    display: flex
+    justify-content: space-around
+    margin-top: 30px
+    margin-bottom: 50px
+    font-size: 18px
+    color: $white
+    font-weight: 900
+
+    .contact-info
+      display: flex
+      align-items: center
+
+    span.icon
+      background: $white
+      color: $black
+      width: 40px
+      height: 40px
+      display: flex
+      font-size: 22px
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      margin-right: .5em
+      +easeTransition(400ms)
+
+    & > a
+      color: $white
+      +easeTransition(400ms)
+      &:hover
+        color: $primary
+        span.icon
+          color: $white
+          background: $primary
+
+  hr
+    margin: 0
+
+  .footer-legal-info
+    padding: 1.2em 0 1em
+    color: $white
+    font-size: 12px
+    text-align: center
+    & > a
+      color: $white
+      font-weight: bold
+      &:hover
+        color: darken($white, 10%)
