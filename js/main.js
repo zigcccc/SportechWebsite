@@ -2,13 +2,19 @@ import {
 	HeroParallax,
 	ScrollAnchors,
 	LazyLoadImages,
-	TrackOutBoundLinks
+	TrackOutBoundLinks,
+	OpenMobileMenu,
+	HandleCookies
 } from './functions';
 
 document.addEventListener('DOMContentLoaded', () => {
+	const menuBtn = document.querySelector('header .navbar-burger');
 	const anchors = document.querySelectorAll('a.scrollable');
+	const outboundAnchors = document.querySelectorAll('a.ga-outbound-link');
+	OpenMobileMenu(menuBtn);
 	ScrollAnchors(anchors);
-	TrackOutBoundLinks(anchors);
+	TrackOutBoundLinks(outboundAnchors);
 	HeroParallax();
 	LazyLoadImages();
+	HandleCookies();
 });
