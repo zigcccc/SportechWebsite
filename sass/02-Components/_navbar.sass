@@ -1,0 +1,47 @@
+nav.navbar
+  background: transparent
+  padding: 20px 0
+
+  .navbar-brand
+    .navbar-item
+      &::before
+        display: none
+
+  .navbar-item
+    color: $white
+    font-weight: bold
+    position: relative
+    +easeTransition(500ms)
+    &:hover
+      color: $primary
+      &::before
+        width: 100%
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      height: 3px
+      background: $primary
+      width: 0%
+      +bounceTransition(500ms)
+    &.social-btn
+      &::before
+        display: none
+      & > span
+        background: $white
+        border-radius: 200px
+        width: 40px
+        height: 40px
+        color: $black
+        display: flex
+        justify-content: center
+        align-items: center
+        +easeTransition(400ms)
+      &:hover
+        & > span
+          background: $primary
+          color: $white
+          transform: translateY(-3px)
+    &:hover
+      background: transparent
