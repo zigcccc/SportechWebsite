@@ -1,5 +1,7 @@
-import { LogHeader } from './functions';
+import { HeroParallax, ScrollAnchors } from './functions';
 
 document.addEventListener('DOMContentLoaded', () => {
-	LogHeader(document.querySelector('header'));
+	const anchors = document.querySelectorAll('a.scrollable');
+	ScrollAnchors(anchors);
+	HeroParallax();
 });
