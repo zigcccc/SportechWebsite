@@ -3,8 +3,12 @@
   display: flex
   justify-content: space-between
   align-items: center
+  @media screen and (max-width: 1087px)
+    flex-direction: column
 
   .item
+    @media screen and (max-width: 1087px)
+      margin: 1em 0
     &.has-content
       h4
         font-size: 24px

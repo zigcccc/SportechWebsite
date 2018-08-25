@@ -1,11 +1,46 @@
 nav.navbar
   background: transparent
   padding: 20px 0
+  @media screen and (max-width: 1087px)
+    position: relative
+    z-index: 99999999
 
   .navbar-brand
+    .navbar-burger
+      span
+        width: 26px
+        left: calc(50% - 13px)
+        height: 3px
+        background: $white
+        &:first-child
+          top: calc(50% - 9px)
+        &:last-child
+          top: calc(50% + 7px)
     .navbar-item
       &::before
         display: none
+
+  .navbar-menu
+    @media screen and (max-width: 1087px)
+      background: #000000
+      height: calc(100vh - 70px)
+      &.is-active
+        z-index: 999999
+        position: relative
+        .navbar-end
+          z-index: 999999
+          position: relative
+
+  .navbar-end
+    @media screen and (max-width: 1087px)
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+  .social-icons
+    display: flex
 
   .navbar-item
     color: $white

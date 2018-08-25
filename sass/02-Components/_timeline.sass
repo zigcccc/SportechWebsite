@@ -8,6 +8,8 @@
   .timeline-triangles
     position: absolute
     opacity: .5
+    @media screen and (max-width: 1087px)
+      display: none
     &.triangles-left
       left: -5%
       bottom: 5%
@@ -26,10 +28,18 @@
       transform: translateX(-50%)
       h4
         text-align: right
+        @media screen and (max-width: 1087px)
+          text-align: left
       h5
         text-align: right
+        @media screen and (max-width: 1087px)
+          text-align: left
+      @media screen and (max-width: 1087px)
+        transform: translateX(0)
     &:nth-child(even)
       transform: translateX(50%)
+      @media screen and (max-width: 1087px)
+        transform: translateX(0)
       .time
         right: unset
         left: 0
@@ -51,6 +61,10 @@
       transform: translate(50%, -50%)
       box-shadow: $shadow-3
       font-size: 14px
+      @media screen and (max-width: 1087px)
+        transform: translate(-50%, -50%)
+        right: unset
+        left: 0
 
     h4
       font-weight: 900

@@ -1,5 +1,11 @@
 .footer-divider
   margin-bottom: -10px
+  width: 101vw
+  & > img
+    width: 100%
+  @media screen and (max-width: 1087px)
+    margin-left: -10px
+    margin-right: -10px
   
 footer
   background: $black
@@ -35,11 +41,9 @@ footer
       &:hover
         transform: translateY(-3px)
 
-    .navbar
-      .navbar-brand
-        padding: 0
-        .navbar-item
-          padding: 0
+  .navbar
+    @media screen and (max-width: 1087px)
+      display: none
 
   .footer-contact-info
     display: flex
@@ -49,10 +53,15 @@ footer
     font-size: 18px
     color: $white
     font-weight: 900
+    @media screen and (max-width: 1087px)
+      flex-direction: column
+      padding: 0 1em
 
     .contact-info
       display: flex
       align-items: center
+      @media screen and (max-width: 1087px)
+        margin: 1em 0
 
     span.icon
       background: $white
