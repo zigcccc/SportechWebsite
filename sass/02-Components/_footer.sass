@@ -3,9 +3,6 @@
   width: 101vw
   & > img
     width: 100%
-  @media screen and (max-width: 1087px)
-    margin-left: -10px
-    margin-right: -10px
   
 footer
   background: $black
@@ -42,8 +39,22 @@ footer
         transform: translateY(-3px)
 
   .navbar
-    @media screen and (max-width: 1087px)
-      display: none
+    .navbar-brand
+      @media screen and (max-width: 1087px)
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        align-items: center
+      .navbar-item
+        padding: 0 2em
+        @media screen and (max-width: 1087px)
+          padding: 0 1em
+          margin: 1em 0
+        &:first-child
+          padding-left: 1em
+    .navbar-menu
+      @media screen and (max-width: 1087px)
+        display: none
 
   .footer-contact-info
     display: flex
