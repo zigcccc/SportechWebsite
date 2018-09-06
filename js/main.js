@@ -4,7 +4,8 @@ import {
 	LazyLoadImages,
 	TrackOutBoundLinks,
 	OpenMobileMenu,
-	HandleCookies
+	HandleCookies,
+	Counter
 } from './functions';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,4 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	HeroParallax();
 	LazyLoadImages();
 	HandleCookies();
+	Counter();
 });

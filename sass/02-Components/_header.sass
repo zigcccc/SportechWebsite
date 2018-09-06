@@ -18,7 +18,7 @@ header
             display: none
 
   h1
-    margin-top: 10vh
+    margin-top: 25px
     +heroTitle
     @media screen and (max-width: 1087px)
       margin-top: 0
@@ -38,13 +38,13 @@ header
     position: absolute
     left: 0
     right: 0
-    bottom: 20vh
+    bottom: 15vh
     display: flex
     justify-content: center
     font-size: 22px
     z-index: 9999
     @media screen and (max-width: 1087px)
-      bottom: 40px
+      bottom: 10px
       font-size: 18px
     & > a
       background: $primary
@@ -92,3 +92,47 @@ header
     position: absolute
     @media screen and (max-width: 1087px)
       opacity: .5
+
+#counter-title
+  font-weight: 900
+  color: $white
+  margin-left: 1em
+  text-align: center
+  margin-top: 2em
+  position: relative
+  z-index: 10
+  +easeTransition(500ms)
+  opacity: 0
+  transform: translateY(100%)
+  @media screen and (max-width: 450px)
+    text-align: left
+  &.active
+    transform: translateY(0)
+    opacity: 1
+
+#counter-container
+  color: $white
+  position: relative
+  z-index: 10
+  max-width: 500px
+  margin: 1em auto 0
+  +easeTransition(500ms)
+  opacity: 0
+  transform: translateY(100%)
+  @media screen and (max-width: 450px)
+    margin-top: 0
+  &.active
+    transform: translateY(0)
+    opacity: 1
+  .column
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    &#seconds
+      @media screen and (max-width: 450px)
+        display: none
+    span
+      font-weight: 900
+      font-size: 2em
+      transform: translateY(5px)
+      margin-right: .25em

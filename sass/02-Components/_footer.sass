@@ -56,6 +56,60 @@ footer
       @media screen and (max-width: 1087px)
         display: none
 
+  .footer-sponsors
+    color: $white
+    display: flex
+    align-items: center
+    position: relative
+    z-index: 100
+    .column
+      display: flex
+    span
+      text-transform: uppercase
+      font-weight: 400
+      font-size: 1.25em
+    a
+      color: $white
+      font-weight: 900
+      font-size: 1.5em
+      position: relative
+      &.has-tooltip
+        &:hover
+          &::after
+            transform: translateY(0) translateX(-25%);
+            opacity: 1
+          &::before
+            transition-delay: 300ms
+            transform: translateY(0) translateX(-50%) rotate(45deg);
+            opacity: 1
+        &::before
+          content: ''
+          width: 25px
+          height: 25px
+          background: $primary
+          transform: rotate(45deg) translateX(-50%) translateY(-100%)
+          opacity: 0
+          left: 25%
+          position: absolute
+          top: -20px
+          +easeTransition(400ms)
+        &::after
+          content: attr(data-tooltip)
+          position: absolute
+          top: -60px
+          left: .5em
+          right: .5em
+          padding: .75em 1em
+          text-align: center
+          background: $primary
+          color: $white
+          z-index: 10
+          +easeTransition(400ms)
+          transform: translateY(100%) translateX(-25%)
+          opacity: 0
+          border-radius: 100px
+          font-size: .75em
+
   .footer-contact-info
     display: flex
     justify-content: space-around

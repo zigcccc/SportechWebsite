@@ -4,6 +4,7 @@ import LazyLoadImages from './lazyLoadImages';
 import TrackOutBoundLinks from './trackOutBoundLinks';
 import OpenMobileMenu from './openMobileMenu';
 import HandleCookies from './handleCookies';
+import Counter from './counter';
 
 export {
 	HeroParallax,
@@ -11,5 +12,6 @@ export {
 	LazyLoadImages,
 	TrackOutBoundLinks,
 	OpenMobileMenu,
-	HandleCookies
+	HandleCookies,
+	Counter
 };
