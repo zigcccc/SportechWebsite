@@ -5,7 +5,9 @@ import {
 	TrackOutBoundLinks,
 	OpenMobileMenu,
 	HandleCookies,
-	Counter
+	Counter,
+	HandlePopup,
+	SubmitFormPrijava
 } from './functions';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,4 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	LazyLoadImages();
 	HandleCookies();
 	Counter();
+	HandlePopup();
+	SubmitFormPrijava();
 });

@@ -174,8 +174,94 @@
           </div>
         </div>
       </div>
+      <hr>
+      <div id="prijava-na-tekmovanje">
+        <div class="section-title-container">
+          <h2>Si želiš tekmovati?</h2>
+          <h3>Izpolni spodnji obrazec in se poteguj za glavno nagrado tudi ti!</h3>
+        </div>
+        <form id="frm-prijava" class="form">
+          <div class="columns">
+            <div class="column field">
+              <label class="label" for="name">Ime in priimek*</label>
+              <div class="control has-icons-left">
+                <input id="name" name="full_name" required type="text" placeholder="Janez Novak" class="input">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+              </div>
+            </div>
+            <div class="column field">
+              <label class="label" for="email">E-pošta*</label>
+              <div class="control has-icons-left">
+                <input id="email" name="email" required type="email" placeholder="janez@novak.com" class="input">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </div>
+            </div>
+            <div class="column field">
+              <label class="label" for="age">Starost</label>
+              <div class="control has-icons-left">
+                <input id="age" name="age" type="number" placeholder="24" class="input">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-birthday-cake"></i>
+                </span>
+              </div>
+            </div>
+            <div class="column field">
+              <label class="label" for="phone">Telefonska številka*</label>
+              <div class="control has-icons-left">
+                <input id="phone" name="phone" type="tel" required minlength="9" placeholder="040100100" class="input">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-phone"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <span class="instructions"><small>* Polja označena z zvezdico so obvezna</small></span>
+          <div class="field is-centered">
+            <div class="control">
+              <label class="checkbox">
+                <input required type="checkbox">
+                Strinjam se s <a href="#" data-toggle="pogoji-sodelovanja" class="popup-trigger">pogoji sodelovanja</a>
+              </label>
+            </div>
+          </div>
+          <div id="submit-container" class="field is-centered">
+            <div class="control">
+              <input type="submit" id="submit-frm-prijava" value="Prijavi se" class="cta" />
+              <span class="loading-container">
+                <i class="fas fa-spinner fa-spin"></i>
+              </span>
+            </div>
+          </div>
+        </form>
+        <div id="form-message-container">
+          <p id="form-message"></p>
+        </div>
+      </div>
     </div>
   </section>
+
+  <div class="popup" id="pogoji-sodelovanja">
+    <div class="popup-content">
+      <div id="close-btn" class="close-popup">
+        <i class="fas fa-times"></i>
+      </div>
+      <h3>Pogoji sodelovanja</h3>
+      <h4>Obdelava podatkov</h4>
+      <p>Upravljalec osebnih podatkov (v nadaljevanju organizator dogodka) in njegovi obdelovalci podatke hranijo v skladu z evropsko Uredbo o varovanju osebnih podatkov in Zakona o varovanju osebnih podatkov. Strinjam, da sme organizator dogodka ali njegov pooblaščeni obdelovalec podatkov moje osebne podatke uporabiti za namen:</p>
+      <ol>
+        <li>da me organizator lahko obvesti o datumih in razporedih tega in prihodnjih dogodkov, ki jih organizira organizator dogodka</li>
+        <li>objave skupinskih in samostojnih slik s prireditev, ki jih organizira organizator in na kateri se lahko pojavim</li>
+        <li>da mi organizator občasno pošlje ponudbo sponzorjev prireditev, ki jih organizira organizator</li>
+        <li>da organizator lahko občasno pošlje elektronsko izdajo tiskovin z razporedom dogodkov v organizaciji organizatorja</li>
+      </ol>
+      <p>S tem ko sem se prijavil kot tekmovalec, se v skladu z Uredbo o varovanju osebnih podatkov strinjam z nameni uporabe osebnih podatkov in sem seznanjen, da se lahko od katere koli obdelave kadar koli odjavim brez obrazložitve. V primeru odjave od posamezne obdelave (posamezen namen) bom odjavo poslal na elektronski naslov knafelj.karmen@gmail.com ali pa se bom odjavil z samodejnim odjavnim mehanizmom v poslanem elektronskem sporočilu organizatorja. Organizator bo osebne podatke za namen izdaje računa tudi v primeru odjave hranil v skladu z zakonom.</p>
+      <div class="close-popup cta"><span>zapri</span></div>
+    </div>
+  </div>
 
   <!-- Dividing section -->
   <section id="dividing-section" class="section-wrapper section-dividing">

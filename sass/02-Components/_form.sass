@@ -1,0 +1,110 @@
+#frm-prijava
+  position: relative
+  z-index: 10
+  margin-top: 50px
+  
+.form
+  @media screen and (max-width: 1023px)
+    max-width: 90%
+    margin: 0 auto
+  .columns
+    margin-bottom: 0
+  .field
+    margin-bottom: 0
+    &.is-centered
+      display: flex
+      justify-content: center
+      align-items: center
+    label.label
+      padding-left: .5em
+    input.input
+      border-radius: 200px
+      &:active,
+      &:focus
+        outline: none
+        border: 2px solid $primary
+        box-shadow: none
+    input.cta
+      display: block
+      margin-top: 20px
+      min-width: 250px
+      font-size: 18px
+      text-align: center
+      text-transform: uppercase
+      padding: .75em 1em
+      border-radius: 200px
+      border: 4px solid $white
+      background: $primary
+      color: $white
+      font-weight: 900
+      +bounceTransition(500ms)
+      -webkit-appearance: none
+      &:active,
+      &:focus
+        outline: none
+        border: 4px solid $white
+        box-shadow: none
+      &:hover
+        cursor: pointer
+        transform: translateY(-4px)
+        box-shadow: $shadow-3
+    a
+      color: $primary
+    .loading-container
+      text-align: center
+      display: block
+      min-width: 250px
+      font-size: 18px
+      padding: 0.75em 1em
+      border-radius: 200px
+      color: $white
+      background: $primary
+      position: absolute
+      top: 20px
+      opacity: 0
+      visibility: hidden
+      +easeTransition(400ms)
+      &.active
+        opacity: 1
+        visibility: visible
+
+  .instructions
+    padding-left: 1em
+    @media screen and (max-width: 1023px)
+      margin-bottom: 1em
+      display: block
+    small
+      font-size: .75em
+      font-weight: 300
+
+#submit-container
+  +easeTransition(400ms)
+  &.hidden
+    opacity: 0
+    margin-top: -60px
+    visibility: hidden
+
+#form-message-container
+  text-align: center
+  background: transparentize($primary, .2)
+  padding: .75em 1em
+  +easeTransition(400ms)
+  opacity: 0
+  transform: translateY(100%)
+  visibility: hidden
+  font-weight: 900
+  .dissmiss-message-btn
+    position: absolute
+    top: 0
+    right: 0
+    padding: 1em
+    font-size: 18px
+    &:hover
+      cursor: pointer
+  &.error
+    background: #f44336
+    color: $white
+  &.active
+    opacity: 1
+    transform: translateY(0)
+    visibility: visible

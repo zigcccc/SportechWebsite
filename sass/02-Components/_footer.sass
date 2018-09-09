@@ -62,8 +62,12 @@ footer
     align-items: center
     position: relative
     z-index: 100
+    @media screen and (max-width: 768px)
+      flex-direction: column
     .column
       display: flex
+      @media screen and (max-width: 768px)
+        display: block
     span
       text-transform: uppercase
       font-weight: 400
